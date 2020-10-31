@@ -28,12 +28,17 @@ def xy(count):
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
 def tap(x, y):
+    # Se utiliza la estructura global para los taps 
+    global taps
     "Update mark and hidden tiles based on tap."
     spot = index(x, y)
     mark = state['mark']
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
+        # Se incrementa en 1 los taps y se despliega
+        taps += 1
+        print("Taps ejecutados: ",taps)
     else:
         hide[spot] = False
         hide[mark] = False
@@ -63,6 +68,8 @@ def draw():
     update()
     ontimer(draw, 100)
 
+# Inicializador de los taps ejecutados
+taps = 0 
 shuffle(tiles)
 setup(420, 420, 370, 0)
 addshape(car)
