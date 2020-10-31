@@ -41,7 +41,7 @@ def xy(count):
 # La siguiente funcion se activa al tocar un mosaico
 def tap(x, y):
     # Se utiliza la estructura global para los taps 
-    global tap
+    global taps
     # Marca de actualización y mosaicos ocultos según el toque.
     spot = index(x, y)
     mark = state['mark']
@@ -109,7 +109,7 @@ def draw():
       goto(195,10)
       color("yellow")
       # Escribimos sobre el rectangulo la frase final
-      write("!Felicidades has ganado¡", False,
+      write("¡Felicidades has ganado!", False,
           "right", ("arial", 20, "bold italic"))
       time.sleep(5)
       # Salimos del juego
@@ -128,6 +128,8 @@ draw()
 done()
 
 # Inciso 4:
-# Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?
+# Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude
+# a tener mejor memoria ?
 # Respuesta al inciso 4:
-# Como idea se nos ocurre cambiar los pares de los números por letras e inclusive por pares de colores para que los usarios se les facilité a la hora de recordar cada casilla volteada.
+# Como idea se nos ocurre cambiar los pares de los números por letras e inclusive por pares de
+# colores para que los usarios se les facilité a la hora de recordar cada casilla volteada.
