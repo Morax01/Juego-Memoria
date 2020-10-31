@@ -116,7 +116,7 @@ def draw():
       exit()
 
 # En este punto inicializamos lo mas importante del juego
-# por ejemplo, la interfaz, los taps, la funcion principal, etc
+# por ejemplo, la interfaz, los taps, la funcion principal, etc.
 taps = 0 
 shuffle(tiles)
 setup(420, 420, 370, 0)
