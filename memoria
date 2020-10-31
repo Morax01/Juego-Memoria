@@ -1,6 +1,11 @@
+# Importación de Librerías
 from random import *
 from turtle import *
 from freegames import path
+
+# Integrantes del equipo:
+# Juan Angel Mora Moreno | A00517141
+# Nombre y matricula
 
 car = path('car.gif')
 tiles = list(range(32)) * 2
@@ -78,3 +83,7 @@ tracer(False)
 onscreenclick(tap)
 draw()
 done()
+
+# Respuesta al inciso 4:
+# Podrías utilizar algo diferente a los dígitos para resolver el juego y que al usuario le ayude a tener mejor memoria ?
+# Como idea se nos ocurre cambiar los pares de los números por letras e inclusive por pares de colores para que los uusarios se les facilité a la hora de recordar cada casilla volteada.
