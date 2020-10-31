@@ -69,7 +69,11 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        # Aqui centramos los digitos en los cuadros
+        if tiles[mark] > 9:
+          goto(x + 2, y)
+        else:
+          goto(x + 15, y)
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
 
